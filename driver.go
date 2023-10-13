@@ -6,7 +6,7 @@ import (
 	"github.com/ydb-platform/ydb-go-sdk/v3"
 	"gorm.io/gorm"
 
-	"github.com/ydb-platform/gorm-driver/internal/dialect"
+	"github.com/PotatoHD404/gorm-driver/internal/dialect"
 )
 
 type Option = dialect.Option
