@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"
 
-	ydb "github.com/ydb-platform/gorm-driver"
+	ydb "github.com/PotatoHD404/gorm-driver"
 )
 
 func TestDriver(t *testing.T) {

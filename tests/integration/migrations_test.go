@@ -14,7 +14,7 @@ import (
 	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
 	"gorm.io/gorm"
 
-	ydb "github.com/ydb-platform/gorm-driver"
+	ydb "github.com/PotatoHD404/gorm-driver"
 )
 
 func TestSequentialAutoMigrate(t *testing.T) {

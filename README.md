@@ -22,7 +22,7 @@ You can simply test your connection to your database with the following:
 package main
 
 import (
-	ydb "github.com/ydb-platform/gorm-driver"
+	ydb "github.com/PotatoHD404/gorm-driver"
 	"gorm.io/gorm"
 )
 

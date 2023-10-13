@@ -18,7 +18,7 @@ import (
 	"gorm.io/gorm/migrator"
 	"gorm.io/gorm/schema"
 
-	"github.com/ydb-platform/gorm-driver/internal/xerrors"
+	"github.com/PotatoHD404/gorm-driver/internal/xerrors"
 )
 
 // Option is option for Dialector New constructor.
