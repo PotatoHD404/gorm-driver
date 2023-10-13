@@ -60,6 +60,11 @@ func toColumnType(f *schema.Field, t types.Type, opts ...toColumnTypeOption) (go
 	return columnType, nil
 }
 
+func toNullable(columnType *migrator.ColumnType) error {
+	columnType.NullableValue.Bool = true
+	return nil
+}
+
 // parseField parse schema.Field and generate gorm.ColumnType with ydb Type.
 func parseField(f *schema.Field) (gorm.ColumnType, types.Type, error) {
 	wrapType := func(t types.Type) (gorm.ColumnType, types.Type, error) {
@@ -105,6 +110,9 @@ func parseField(f *schema.Field) (gorm.ColumnType, types.Type, error) {
 		return wrapType(types.TypeBytes)
 	case schema.Time:
 		return wrapType(types.TypeTimestamp)
+	case "time?":
+		ct, err := toColumnType(f, types.TypeTimestamp, toNullable)
+		return ct, types.TypeTimestamp, err
 	default:
 		return nil, nil, xerrors.WithStacktrace(fmt.Errorf("unsupported data type '%s'", f.DataType))
 	}
