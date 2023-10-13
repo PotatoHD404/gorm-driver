@@ -125,7 +125,7 @@ func (d Dialector) Initialize(db *gorm.DB) error {
 		db.ConnPool = conn
 
 		db.DisableForeignKeyConstraintWhenMigrating = true
-		db.IgnoreRelationshipsWhenMigrating = true
+		// db.IgnoreRelationshipsWhenMigrating = true
 	}
 
 	callbacks.RegisterDefaultCallbacks(db, &callbacks.Config{
